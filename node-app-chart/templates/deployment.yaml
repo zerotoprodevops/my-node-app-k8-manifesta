@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+
+
+kind: Deployment
+
+
+metadata:
+  name: node-app-depoyment
+
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: node-app
+      type: frontend  
+  template:
+    metadata:
+      name: my-node-app
+      labels:  
+        app: node-app
+        type: frontend
+    spec:
+      containers:
+        - name: nodeapp-container
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:  
+            - containerPort: 3000

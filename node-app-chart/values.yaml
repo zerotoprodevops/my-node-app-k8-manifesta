@@ -1,0 +1,11 @@
+replicaCount: 2
+
+image:
+  repository: jyotimanab/my-node-app
+  tag: "latest"
+
+service:
+  port: 3000
+
+ingress:
+  host: "my-node-app.local"
