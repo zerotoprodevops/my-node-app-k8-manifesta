@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: jyotimanab/my-node-app
-  tag: "latest"
+  tag: 26
 
 service:
   port: 3000
