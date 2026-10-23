@@ -8,7 +8,7 @@ metadata:
   name: node-app-depoyment
 
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: node-app
